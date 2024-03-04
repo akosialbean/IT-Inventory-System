@@ -11,4 +11,12 @@ class TicketController extends Controller
         $tickets = Ticket::all();
         return $tickets;
     }
+
+    public function insertTicket(Request $request){
+        $ticket = $request->validate([
+            't_title' => ['required']
+        ]);
+
+        Ticket::insert($ticket);
+    }
 }

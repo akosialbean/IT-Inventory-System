@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TicketController;
+use App\Http\Controllers\DeviceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +20,5 @@ use App\Http\Controllers\TicketController;
 //     return $request->user();
 // });
 
-Route::get('/tickets', [TicketController::class, 'getTickets'])->name('tickets');
+Route::get('/devices', [DeviceController::class, 'devices'])->name('devices');
+Route::post('/devices/add', [DeviceController::class, 'addDevice'])->name('addDevice');
