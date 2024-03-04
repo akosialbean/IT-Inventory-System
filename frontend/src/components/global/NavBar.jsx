@@ -72,7 +72,7 @@ const NavBar = (props) => {
                         <Button color='inherit'>Login</Button>
                     </Toolbar>
                 </AppBar>
-                <nav sx={{background: '#000'}}>
+                <nav>
                     <Drawer
                         container={container}
                         variant='temporary'
